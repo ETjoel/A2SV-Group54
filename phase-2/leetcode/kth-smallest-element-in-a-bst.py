@@ -11,6 +11,8 @@ class Solution:
                 return []
             
             left = helper(root.left)
+            if len(left) + 1 == k:
+                return left + [root.val]
             right = helper(root.right)
 
             return left + [root.val] + right
